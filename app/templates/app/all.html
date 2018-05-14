@@ -1,0 +1,22 @@
+{% extends "app/base.html" %}
+{% load static %}
+{% block content %}
+<br>
+
+<table class="table table-dark">
+    <thead><tr>
+    <th scope="col">Identifier</th>
+    <th scope="col">Feedback</th>
+    <th scope="col">Creation date</th>
+</tr>
+    {% for row in rows %}
+    <tbody>
+        <tr>
+        <th scope="row">{{ row.id }}</th>
+        <td>{{ row.comments }}</td>
+        <td>{{ row.created_at }}</td>
+    </tr>
+    </tbody>
+    {% endfor %}
+</table
+{% endblock %}
